@@ -77,7 +77,7 @@ public class DealerServiceImpl implements DealerService {
                                 Dealer dealer = modelMapper.map(dealerImportDto, Dealer.class);
                                 dealer.setOfferingCar(car.get());
                                 
-                                // Parse birthday if present
+                                
                                 if (dealerImportDto.getBirthday() != null && !dealerImportDto.getBirthday().isEmpty()) {
                                     LocalDate birthday = LocalDate.parse(dealerImportDto.getBirthday(), 
                                         DateTimeFormatter.ofPattern("yyyy-MM-dd"));
